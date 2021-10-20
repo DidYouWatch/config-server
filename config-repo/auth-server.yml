@@ -1,0 +1,12 @@
+server.port: 9999
+
+# TODO add Spring Security related properties in default
+
+---
+spring.config.activate.on-profile: prod
+
+server.port: 80
+
+logging.level.root: WARN
+
+# TODO add Spring Security related properties in prod

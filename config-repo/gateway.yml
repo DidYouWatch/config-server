@@ -1,0 +1,40 @@
+server.port: 8080
+
+# TODO add more gateway routes, filters
+spring.cloud.gateway.routes:
+  - id: auth-server
+    uri: http://${app.auth-server}:9999
+    predicates:
+      - Path=/auth/**
+    filters:
+      - StripPrefix=1
+
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator: INFO
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.web.server.adapter.HttpWebHandlerAdapter: TRACE
+
+info.app:
+  name: gateway
+  description: i have ${app.auth-server}
+  version: 1.0.0
+
+app.auth-server: localhost
+
+# TODO add Spring Security related properties in default
+
+---
+spring.config.activate.on-profile: prod
+
+logging:
+  level:
+    root: WARN
+    org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator: WARN
+    org.springframework.cloud.gateway: WARN
+    org.springframework.web.server.adapter.HttpWebHandlerAdapter: WARN
+
+app.auth-server: auth-server
+
+# TODO add Spring Security related properties in prod

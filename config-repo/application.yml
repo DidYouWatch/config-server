@@ -1,0 +1,20 @@
+
+# TODO dev kafka setting
+
+# actuator
+
+management.endpoint.health.show-details: ALWAYS
+management.endpoints.web.exposure.include: "*"
+
+app.auth-server: localhost
+
+---
+spring.config.activate.on-profile: prod
+
+# TODO prod kafka setting
+
+# actuator
+
+management.endpoints.web.exposure.include: health,info
+
+app.auth-server: auth-server
