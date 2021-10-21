@@ -31,10 +31,10 @@ spec:
         - name: config-server
           image: gcr.io/didyouwatch-329208/config-server
           env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: prod
-            - name: JAVA_OPTS
-              value: ' -Xmx256m -Xms256m -DSpring.profiles.active=${SPRING_PROFILES_ACTIVE}'
+#            - name: SPRING_PROFILES_ACTIVE
+#              value: prod
+#            - name: JAVA_OPTS
+#              value: ' -Xmx256m -Xms256m -DSpring.profiles.active=${SPRING_PROFILES_ACTIVE}'
           resources:
             requests:
               memory: '512Mi'
