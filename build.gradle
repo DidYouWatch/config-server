@@ -43,7 +43,7 @@ jib {
         tags = ['latest']
     }
     container {
-        jvmFlags = ['-DSpring.profiles.active=prod', '-Xms256m']
+        jvmFlags = ['-DSpring.profiles.active=prod, native', '-Xms256m']
         ports = ['8888']
         format = 'OCI'
     }
