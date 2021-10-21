@@ -40,7 +40,8 @@ steps:
         PROJECT=$$(gcloud config get-value core/project)
         gcloud container clusters get-credentials "$${CLUSTER}" \
         --project $${PROJECT} --zone "$${ZONE}" \
-        && kubectl create configmap config-server-configmap --from-file=config-repo/ --save-config \
+        && kubectl create configmap config-server-configmap --from-file=config-repo/ --save-config -o yaml --dry-run=client \
+         | kubectl apply -f - \
         && kubectl apply -f kubernetes/config-server.yml
 # 적용할 kubernetes 정의 파일 명시하기
 
