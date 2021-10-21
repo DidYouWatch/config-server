@@ -62,7 +62,7 @@ spec:
               mountPath: "/config-repo"
       volumes:
         - name: config-volume
-          configmap:
+          configMap:
             name: config-server-configmap
 
 ---
