@@ -16,7 +16,7 @@ app.auth-server: localhost
 ---
 spring.config.activate.on-profile: prod
 
-spring.cloud.config.server.native.searchLocations: file:${PWD}/config-repo
+spring.cloud.config.server.native.searchLocations: file:/config-repo
 
 management.endpoints.web.exposure.include: health, info
 
