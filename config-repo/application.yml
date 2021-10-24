@@ -6,7 +6,7 @@
 management.endpoint.health.show-details: ALWAYS
 management.endpoints.web.exposure.include: "*"
 
-app.auth-server: localhost
+app.auth-server: "localhost:9999"
 
 ---
 spring.config.activate.on-profile: prod
@@ -17,4 +17,4 @@ spring.config.activate.on-profile: prod
 
 management.endpoints.web.exposure.include: health,info
 
-app.auth-server: auth-server
+app.auth-server: "auth-service:80"
