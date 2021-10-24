@@ -11,8 +11,6 @@ spring.cloud.config.server.native.searchLocations: file:C:/git/DidYouWatch/confi
 management.endpoint.health.show-details: "ALWAYS"
 management.endpoints.web.exposure.include: "*"
 
-logging.level.root: debug
-
 app.auth-server: localhost
 
 ---
@@ -21,7 +19,5 @@ spring.config.activate.on-profile: prod
 spring.cloud.config.server.native.searchLocations: file:${PWD}/config-repo
 
 management.endpoints.web.exposure.include: health, info
-
-logging.level.root: info
 
 app.auth-server: auth-server
