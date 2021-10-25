@@ -30,10 +30,10 @@ spring.config.activate.on-profile: prod
 
 logging:
   level:
-    root: TRACE
-    org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator: TRACE
-    org.springframework.cloud.gateway: TRACE
-    org.springframework.web.server.adapter.HttpWebHandlerAdapter: TRACE
+    root: INFO
+    org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator: INFO
+    org.springframework.cloud.gateway: INFO
+    org.springframework.web.server.adapter.HttpWebHandlerAdapter: INFO
 
 app.auth-server: "auth-service:80"
 

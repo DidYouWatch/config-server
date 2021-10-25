@@ -35,6 +35,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
 
-logging.level.root: TRACE
+logging.level.root: INFO
 
 # TODO add Spring Security related properties in prod
