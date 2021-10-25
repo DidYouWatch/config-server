@@ -8,6 +8,11 @@ management.endpoints.web.exposure.include: "*"
 
 app.auth-server: "localhost:9999"
 
+info.app:
+  name: ${spring.application.name}
+  description: info worked
+  version: 1.0.0
+
 ---
 spring.config.activate.on-profile: prod
 

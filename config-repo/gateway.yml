@@ -17,9 +17,7 @@ logging:
     org.springframework.web.server.adapter.HttpWebHandlerAdapter: TRACE
 
 info.app:
-  name: gateway
-  description: i have ${app.auth-server}
-  version: 1.0.0
+  description: i have ${app.auth-server} configuration
 
 app.auth-server: "localhost:9999"
 
