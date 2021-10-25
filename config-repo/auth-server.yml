@@ -1,0 +1,40 @@
+server.port: 9999
+
+# TODO add Spring Security related properties in default
+
+spring.data:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 100
+        dialect: org.hibernate.dialect.H2Dialect
+
+logging.level.root: INFO
+
+---
+spring.config.activate.on-profile: prod
+
+spring:
+  datasource:
+    url: ${SQL_DB_URL}
+    username: ${SQL_DB_USERNAME}
+    password: ${SQL_DB_PASSWORD}
+    driverClassName: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
+logging.level.root: INFO
+
+# TODO add Spring Security related properties in prod

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+
+server.port: 8888
+
+spring.cloud.config.server.native.searchLocations: file:C:/git/DidYouWatch/config-server/config-repo/
+
+management.endpoint.health.show-details: "ALWAYS"
+management.endpoints.web.exposure.include: "*"
+
+app.auth-server: localhost
+
+---
+spring.config.activate.on-profile: prod
+
+spring.cloud.config.server.native.searchLocations: file:/config-repo
+
+management.endpoints.web.exposure.include: health, info
+
+app.auth-server: auth-server
